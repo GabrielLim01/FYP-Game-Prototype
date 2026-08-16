@@ -1,7 +1,7 @@
-[gd_scene load_steps=264 format=3 uid="uid://bqpkxht3mx8l8"]
+[gd_scene format=3 uid="uid://bqpkxht3mx8l8"]
 
 [ext_resource type="Texture2D" uid="uid://dpwpop61vufvt" path="res://player/goblin.png" id="1"]
-[ext_resource type="Script" path="res://player/goblin.gd" id="2"]
+[ext_resource type="Script" uid="uid://4ewub00tocrj" path="res://player/goblin.gd" id="2"]
 
 [sub_resource type="Gradient" id="662"]
 offsets = PackedFloat32Array(0.00558659, 0.441341, 0.659218)
@@ -1087,7 +1087,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("276")
 }],
-"loop": true,
+"loop": 1,
 "name": &"45back_left_idle",
 "speed": 24.0
 }, {
@@ -1140,7 +1140,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("292")
 }],
-"loop": true,
+"loop": 1,
 "name": &"45back_left_walk",
 "speed": 24.0
 }, {
@@ -1193,7 +1193,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("308")
 }],
-"loop": true,
+"loop": 1,
 "name": &"45back_right_idle",
 "speed": 24.0
 }, {
@@ -1246,7 +1246,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("324")
 }],
-"loop": true,
+"loop": 1,
 "name": &"45back_right_walk",
 "speed": 24.0
 }, {
@@ -1299,7 +1299,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("340")
 }],
-"loop": true,
+"loop": 1,
 "name": &"45front_left_idle",
 "speed": 24.0
 }, {
@@ -1352,7 +1352,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("356")
 }],
-"loop": true,
+"loop": 1,
 "name": &"45front_left_walk",
 "speed": 24.0
 }, {
@@ -1405,7 +1405,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("372")
 }],
-"loop": true,
+"loop": 1,
 "name": &"45front_right_idle",
 "speed": 24.0
 }, {
@@ -1458,7 +1458,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("388")
 }],
-"loop": true,
+"loop": 1,
 "name": &"45front_right_walk",
 "speed": 24.0
 }, {
@@ -1511,7 +1511,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("612")
 }],
-"loop": true,
+"loop": 1,
 "name": &"back_idle",
 "speed": 24.0
 }, {
@@ -1564,7 +1564,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("628")
 }],
-"loop": true,
+"loop": 1,
 "name": &"back_walk",
 "speed": 24.0
 }, {
@@ -1617,7 +1617,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("644")
 }],
-"loop": true,
+"loop": 1,
 "name": &"front_idle",
 "speed": 24.0
 }, {
@@ -1670,7 +1670,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("660")
 }],
-"loop": true,
+"loop": 1,
 "name": &"front_walk",
 "speed": 24.0
 }, {
@@ -1723,7 +1723,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("468")
 }],
-"loop": true,
+"loop": 1,
 "name": &"side_left_idle",
 "speed": 24.0
 }, {
@@ -1776,7 +1776,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("532")
 }],
-"loop": true,
+"loop": 1,
 "name": &"side_left_walk",
 "speed": 24.0
 }, {
@@ -1829,7 +1829,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("500")
 }],
-"loop": true,
+"loop": 1,
 "name": &"side_right_idle",
 "speed": 24.0
 }, {
@@ -1882,7 +1882,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("516")
 }],
-"loop": true,
+"loop": 1,
 "name": &"side_right_walk",
 "speed": 24.0
 }]
@@ -1894,30 +1894,30 @@ height = 14.0
 [sub_resource type="OccluderPolygon2D" id="661"]
 polygon = PackedVector2Array(16.25, 18.75, 18.75, 36.25, 15, 38.75, 6.25, 42.5, -5, 42.5, -13.75, 41.25, -18.75, 37.5, -15, 20)
 
-[node name="Goblin" type="CharacterBody2D"]
+[node name="Goblin" type="CharacterBody2D" unique_id=400374852]
 script = ExtResource("2")
 
-[node name="Shadow" type="Sprite2D" parent="."]
+[node name="Shadow" type="Sprite2D" parent="." unique_id=311477840]
 modulate = Color(0.129412, 0.0745098, 0.192157, 0.647059)
 position = Vector2(0, -0.406251)
 scale = Vector2(0.78125, 0.362305)
 texture = SubResource("663")
 
-[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=588626983]
 position = Vector2(0, -35)
 scale = Vector2(0.8, 0.8)
 sprite_frames = SubResource("260")
 animation = &"front_idle"
 frame = 8
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=736581129]
 position = Vector2(0, -7)
 rotation = 1.5708
 shape = SubResource("1")
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=954373854]
 
-[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+[node name="LightOccluder2D" type="LightOccluder2D" parent="." unique_id=1712792903]
 visible = false
 light_mask = 16
 position = Vector2(0, -31)

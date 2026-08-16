@@ -28,6 +28,8 @@ var anim_directions = {
 	],
 }
 
+func _ready() -> void:
+	add_to_group("player")
 
 func _physics_process(_delta):
 	var motion = Vector2()

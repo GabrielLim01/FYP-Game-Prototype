@@ -1,0 +1,6 @@
+Area2D
+Label
+CollisionShape2D
+StaticBody2D
+Sprite2D
+Node2D

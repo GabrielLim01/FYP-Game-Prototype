@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cliopqgngmeag"]
+
+[ext_resource type="Script" uid="uid://dyd8m52evqe0c" path="res://obstacles/win_zone.gd" id="1_sxf5e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6fas1"]
+
+[node name="WinZone" type="Node2D" unique_id=1496962417]
+script = ExtResource("1_sxf5e")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1341912829]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1124806438]
+scale = Vector2(2, 2)
+shape = SubResource("RectangleShape2D_6fas1")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_enter"]
