@@ -1,0 +1,118 @@
+[gd_scene format=4 uid="uid://cj3kyrrcqcaij"]
+
+[ext_resource type="TileSet" uid="uid://ceswxvl27cesm" path="res://tileset/tileset.tres" id="1"]
+[ext_resource type="Texture2D" uid="uid://cy8biel27i5i7" path="res://decorations/wall_skull.png" id="2"]
+[ext_resource type="PackedScene" uid="uid://jht7b8345qcl" path="res://obstacles/button.tscn" id="2_4f3i4"]
+[ext_resource type="PackedScene" uid="uid://bqpkxht3mx8l8" path="res://player/goblin.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://cpssi5rh2auw8" path="res://decorations/candle.tscn" id="4"]
+[ext_resource type="Texture2D" uid="uid://bycat883fu7q2" path="res://decorations/banner.png" id="6"]
+[ext_resource type="PackedScene" uid="uid://ebenllixxl6p" path="res://decorations/coin_pile.tscn" id="9"]
+
+[node name="Dungeon" type="Node2D" unique_id=1904835399]
+
+[node name="Floor" type="TileMap" parent="." unique_id=657136514]
+y_sort_enabled = true
+position = Vector2(-64, -32)
+tile_set = ExtResource("1")
+format = 2
+layer_0/y_sort_enabled = true
+layer_0/y_sort_origin = 32
+layer_0/tile_data = PackedInt32Array(458749, 0, 0, 393216, 0, 0, 393217, 1, 0, 393219, 1, 0, 393220, 1, 0, 393221, 0, 0, 393222, 0, 0, 393223, 0, 0, 327687, 0, 0, 262151, 0, 0, 196615, 0, 0, -65529, 0, 0, -131065, 0, 0, -196601, 0, 0, -262137, 0, 0, -196611, 1, 0, -131075, 0, 0, -65539, 1, 0, -3, 1, 0, 65533, 1, 0, 131069, 0, 0, 65532, 1, 0, 131068, 0, 0, 196604, 1, 0, 262140, 0, 0, 327676, 1, 0, 393212, 0, 0, 327677, 1, 0, 393213, 0, 0, 327678, 1, 0, 393214, 0, 0, 327679, 1, 0, 393215, 0, 0, 196607, 1, 0, 262143, 0, 0, 131072, 1, 0, 196608, 1, 0, 131073, 1, 0, 196609, 1, 0, 1, 1, 0, 65537, 0, 0, 2, 1, 0, 65538, 1, 0, -1, 1, 0, 65535, 0, 0, -65536, 1, 0, 0, 0, 0, -196608, 1, 0, -131072, 1, 0, -196607, 1, 0, -131071, 0, 0, -196606, 1, 0, -131070, 0, 0, -196605, 1, 0, -131069, 0, 0, -196604, 1, 0, -131068, 0, 0, -65532, 1, 0, 4, 0, 0, -65531, 1, 0, 5, 1, 0, 65541, 1, 0, 131077, 1, 0, 65540, 1, 0, 131076, 1, 0, 196612, 1, 0, 262148, 1, 0, 262142, 1, 0, 196606, 1, 0, 196605, 1, 0, 262141, 1, 0, 131070, 1, 0, 65534, 1, 0, 131071, 1, 0, 65536, 1, 0, 262145, 1, 0, 327681, 1, 0, 327680, 1, 0, 262144, 1, 0, 327682, 1, 0, 262146, 1, 0, 196610, 1, 0, 196611, 1, 0, 131075, 1, 0, 262147, 1, 0, 131074, 1, 0, 3, 1, 0, 65539, 1, 0, 196613, 1, 0, 262149, 1, 0, 327685, 1, 0, 327684, 1, 0, 327683, 1, 0, 327686, 1, 0, 262150, 1, 0, 196614, 1, 0, 131078, 1, 0, -65530, 1, 0, -131066, 1, 0, 6, 1, 0, 65542, 1, 0, -196602, 1, 0, -262138, 1, 0, -196603, 1, 0, -131067, 1, 0, -262139, 1, 0, -262140, 1, 0, -262141, 1, 0, -262142, 1, 0, -262143, 1, 0, -262144, 1, 0, -131073, 1, 0, -131074, 1, 0, -196610, 1, 0, -2, 1, 0, -65538, 1, 0, -65537, 1, 0, -196609, 1, 0, -65535, 1, 0, -65534, 1, 0, -65533, 1, 0)
+
+[node name="Walls" type="TileMap" parent="." unique_id=1202900195]
+y_sort_enabled = true
+position = Vector2(-64, -32)
+tile_set = ExtResource("1")
+format = 2
+
+[node name="Shadows" type="Node2D" parent="Walls" unique_id=1506663849]
+position = Vector2(64, 32)
+
+[node name="CollisionDecorations" type="Node2D" parent="Walls" unique_id=381928221]
+position = Vector2(64, 32)
+
+[node name="FloorObjects" type="Node2D" parent="Walls" unique_id=1643788612]
+position = Vector2(64, 32)
+
+[node name="Button" parent="Walls/FloorObjects" unique_id=431418377 instance=ExtResource("2_4f3i4")]
+position = Vector2(-130, 99)
+rotation = 8.855397e-05
+
+[node name="coin_pile" parent="Walls/FloorObjects" unique_id=1611318184 instance=ExtResource("9")]
+position = Vector2(-95, -118)
+
+[node name="Goblin" parent="Walls" unique_id=806385445 instance=ExtResource("3")]
+position = Vector2(305, 265)
+
+[node name="Layer1" type="TileMapLayer" parent="Walls" unique_id=1838557018]
+y_sort_enabled = true
+use_parent_material = true
+tile_map_data = PackedByteArray("AAD8/wUAAgAAAAAAAAD8/wQAAgAAAAAAAAD8//z/AgAAAAAAAAD8////AgAAAAAAAAD8/wAAAgAAAAAAAAD8/wEAAgAAAAAAAAD8/wIAAgAAAAAAAAD8/wMAAgAAAAAAAAD8//v/AgAAAAAAAAD9//v/AgAAAAAAAAD+//v/AgAAAAAAAAD///v/AgAAAAAAAAACAPv/AgAAAAAAAAADAPv/AgAAAAAAAAAEAPv/AgAAAAAAAAD8/wYAAgAAAAAAAAD9/wYAAgAAAAAAAAD+/wYAAgAAAAAAAAD//wYAAgAAAAAAAAAAAAYAAgAAAAAAAAABAAYAAgAAAAAAAAACAAYAAgAAAAAAAAADAAYAAgAAAAAAAAAEAAYAAgAAAAAAAAAFAAYAAgAAAAAAAAAGAAYAAgAAAAAAAAAHAAYAAgAAAAAAAAAHAPv/AgAAAAAAAAAHAPz/AgAAAAAAAAAHAP3/AgAAAAAAAAAHAAEAAgAAAAAAAAAHAAIAAgAAAAAAAAAHAAMAAgAAAAAAAAAHAAQAAgAAAAAAAAAHAAUAAgAAAAAAAAAHAP7/AgAAAAAAAAAHAAAAAgAAAAAAAAAHAP//AgAAAAAAAAABAPv/AgAAAAAAAAD///r/BAAAAAAAABAAAPv/AgAAAAAAAAD8//3/BAAAAAAAAAD8//7/AgAAAAAAAAAFAPv/AgAAAAAAAAAGAPv/AgAAAAAAAAA=")
+tile_set = ExtResource("1")
+y_sort_origin = 32
+
+[node name="HighWalls" type="TileMap" parent="." unique_id=44538474]
+y_sort_enabled = true
+position = Vector2(-64, -32)
+tile_set = ExtResource("1")
+format = 2
+layer_0/y_sort_enabled = true
+layer_0/tile_data = PackedInt32Array(-327685, 2, 0, 65531, 2, 0, 131067, 2, 0, 262139, 2, 0, 327675, 2, 0, 196603, 2, 0, 393211, 2, 0, -327684, 2, 0, -327683, 2, 0, -327682, 2, 0, -393212, 2, 0, -393211, 2, 0, -393210, 2, 0, -393216, 2, 0, -393215, 2, 0, -393214, 2, 0, -393213, 2, 0, -327681, 2, 0, -327674, 2, 0, -262149, 2, 0, -5, 2, 0)
+
+[node name="HighWalls2" type="TileMap" parent="." unique_id=108921929]
+y_sort_enabled = true
+position = Vector2(-64, -32)
+tile_set = ExtResource("1")
+format = 2
+layer_0/y_sort_enabled = true
+layer_0/tile_data = PackedInt32Array(-393220, 2, 0, -393219, 2, 0, -393218, 2, 0, -393217, 2, 0, -458751, 2, 0, -458752, 2, 0)
+
+[node name="Decorations" type="Node2D" parent="." unique_id=238966772]
+
+[node name="Candles" type="Node2D" parent="Decorations" unique_id=988002933]
+
+[node name="Node2D" parent="Decorations/Candles" unique_id=1211433210 instance=ExtResource("4")]
+position = Vector2(231, -208)
+
+[node name="Node2D2" parent="Decorations/Candles" unique_id=82418307 instance=ExtResource("4")]
+position = Vector2(406, -144)
+
+[node name="Node2D3" parent="Decorations/Candles" unique_id=1936551004 instance=ExtResource("4")]
+position = Vector2(-288, -124)
+scale = Vector2(-1, 1)
+
+[node name="Node2D4" parent="Decorations/Candles" unique_id=484387021 instance=ExtResource("4")]
+position = Vector2(-453, -33)
+scale = Vector2(-1, 1)
+
+[node name="banners" type="Node2D" parent="Decorations" unique_id=179693027]
+
+[node name="Sprite2D" type="Sprite2D" parent="Decorations/banners" unique_id=716005228]
+position = Vector2(39, -271)
+scale = Vector2(-1, 1)
+texture = ExtResource("6")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Decorations/banners" unique_id=1504625608]
+position = Vector2(-354, -83)
+scale = Vector2(-1, 1)
+texture = ExtResource("6")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Decorations/banners" unique_id=364280090]
+position = Vector2(311, -197)
+texture = ExtResource("6")
+
+[node name="wall_skulls" type="Node2D" parent="Decorations" unique_id=4061019]
+
+[node name="Sprite2D" type="Sprite2D" parent="Decorations/wall_skulls" unique_id=701315722]
+position = Vector2(302, -274)
+texture = ExtResource("2")
+
+[node name="Ambient" type="Node2D" parent="." unique_id=1518225715]
+visible = false
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1078115349]
+show_behind_parent = true
+light_mask = 0
+color = Color(0.466667, 0.635294, 0.92549, 1)
+
+[node name="Crows" type="Node2D" parent="." unique_id=1880948146]

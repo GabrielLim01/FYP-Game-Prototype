@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://bt3wvw6gi76ua"]
+
+[ext_resource type="Texture2D" uid="uid://c1sjf32oobaxv" path="res://menu_background.webp" id="1_06t4h"]
+[ext_resource type="Script" uid="uid://b1t1gj42kc53" path="res://main_menu.gd" id="1_fu7sn"]
+[ext_resource type="FontFile" uid="uid://dggrcvmsxyrt4" path="res://DungeonFont.ttf" id="2_7vrkn"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6fas1"]
+texture = ExtResource("1_06t4h")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6fas1"]
+bg_color = Color(0.42745098, 0.5411765, 0.8509804, 0.38039216)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_size = 5
+shadow_offset = Vector2(0, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fu7sn"]
+bg_color = Color(0.14117648, 0.20784314, 0.42745098, 0.60784316)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_size = 5
+shadow_offset = Vector2(0, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jix8l"]
+bg_color = Color(0.42745098, 0.5411765, 0.8509804, 0.5764706)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_size = 5
+shadow_offset = Vector2(0, 4)
+
+[node name="MainMenu" type="Control" unique_id=1360011705]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fu7sn")
+
+[node name="Panel" type="Panel" parent="." unique_id=1161270615]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_6fas1")
+
+[node name="Button" type="Button" parent="." unique_id=657941963]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 34.0
+offset_top = 203.0
+offset_right = 306.0
+offset_bottom = 307.0
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.14767182, 0.14767179, 0.14767179, 1)
+theme_override_colors/font_pressed_color = Color(0.49747366, 0.49747366, 0.49747366, 1)
+theme_override_colors/font_hover_color = Color(0.49803922, 0.49803922, 0.49803922, 1)
+theme_override_fonts/font = ExtResource("2_7vrkn")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxFlat_6fas1")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_fu7sn")
+theme_override_styles/hover = SubResource("StyleBoxFlat_jix8l")
+text = "Start"
+
+[connection signal="button_up" from="Button" to="." method="_on_start"]
