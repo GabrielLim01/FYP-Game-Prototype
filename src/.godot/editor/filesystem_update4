@@ -1,11 +1,7 @@
-res://tileset/tileset.tres
-res://obstacles/door.tscn
-res://obstacles/door.gd
-res://obstacles/button.gd
+res://obstacles/gate/gate.tscn
+res://obstacles/gate/gate.gd
 res://dungeon.tscn
-res://obstacles/win_zone.tscn
-res://game_over.tscn
-res://game_over.gd
-res://obstacles/win_zone.gd
-res://player/goblin.tscn
-res://player/goblin.gd
+res://tileset/tileset.tres
+res://obstacles/key/key.tscn
+res://obstacles/key/key.gd
+res://obstacles/button.gd
