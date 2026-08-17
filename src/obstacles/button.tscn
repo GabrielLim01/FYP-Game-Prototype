@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dqv71akcmlppy" path="res://obstacles/button.gd" id="1_7ujg6"]
 [ext_resource type="Texture2D" uid="uid://v1eamjn6ch3q" path="res://obstacles/button_idle.png" id="2_vssqe"]
+[ext_resource type="FontFile" uid="uid://dggrcvmsxyrt4" path="res://DungeonFont.ttf" id="3_qqsd3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7ujg6"]
 size = Vector2(48.876534, 23.36669)
@@ -21,6 +22,19 @@ shape = SubResource("RectangleShape2D_7ujg6")
 position = Vector2(1.9999981, -4.000004)
 scale = Vector2(0.17, 0.11)
 texture = ExtResource("2_vssqe")
+
+[node name="Label" type="Label" parent="Area2D/Sprite2D" unique_id=366505048]
+offset_left = -5.8823395
+offset_top = -181.81815
+offset_right = 150.11766
+offset_bottom = -28.818146
+rotation = 0.71130234
+scale = Vector2(0.95077956, 1.4102726)
+theme_override_colors/font_color = Color(0.9411765, 0.9411765, 0.9411765, 0.5921569)
+theme_override_fonts/font = ExtResource("3_qqsd3")
+theme_override_font_sizes/font_size = 200
+text = "10"
+horizontal_alignment = 1
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_enter"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_exit"]
