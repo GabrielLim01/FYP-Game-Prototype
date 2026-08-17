@@ -47,6 +47,21 @@ tile_map_data = PackedByteArray("AAD8/wUAAgAAAAAAAAD8/wQAAgAAAAAAAAD8//z/AgAAAAA
 tile_set = ExtResource("1")
 y_sort_origin = 32
 
+[node name="Traps" type="Node2D" parent="Walls" unique_id=2122865644]
+position = Vector2(64, 32)
+
+[node name="Trap" parent="Walls/Traps" unique_id=824230185 instance=ExtResource("7_kun6q")]
+position = Vector2(227, 224)
+
+[node name="Trap3" parent="Walls/Traps" unique_id=999511129 instance=ExtResource("7_kun6q")]
+position = Vector2(4, 46)
+
+[node name="Trap4" parent="Walls/Traps" unique_id=1615924287 instance=ExtResource("7_kun6q")]
+position = Vector2(158, 31)
+
+[node name="Trap5" parent="Walls/Traps" unique_id=1586739939 instance=ExtResource("7_kun6q")]
+position = Vector2(353, 128)
+
 [node name="Goblin" parent="Walls" unique_id=806385445 instance=ExtResource("3")]
 position = Vector2(33, -58)
 
@@ -61,9 +76,6 @@ position = Vector2(94.999985, 274.99997)
 rotation = 8.855397e-05
 scale = Vector2(1.0574416, 1.0074642)
 door = NodePath("../../Door")
-
-[node name="Trap" parent="Walls" unique_id=1586739939 instance=ExtResource("7_kun6q")]
-position = Vector2(417, 160)
 
 [node name="HighWalls" type="TileMap" parent="." unique_id=44538474]
 y_sort_enabled = true
@@ -130,15 +142,3 @@ light_mask = 0
 color = Color(0.466667, 0.635294, 0.92549, 1)
 
 [node name="Crows" type="Node2D" parent="." unique_id=1880948146]
-
-[node name="Trap" parent="." unique_id=824230185 instance=ExtResource("7_kun6q")]
-position = Vector2(227, 224)
-
-[node name="Trap2" parent="." unique_id=397120603 instance=ExtResource("7_kun6q")]
-position = Vector2(63, -111)
-
-[node name="Trap3" parent="." unique_id=999511129 instance=ExtResource("7_kun6q")]
-position = Vector2(4, 46)
-
-[node name="Trap4" parent="." unique_id=1615924287 instance=ExtResource("7_kun6q")]
-position = Vector2(158, 31)
