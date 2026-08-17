@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://m5s2rwo8p5k7"]
+
+[ext_resource type="Script" uid="uid://b2v2rnqpnkwu5" path="res://obstacles/gate.gd" id="1_h350g"]
+[ext_resource type="Texture2D" uid="uid://birb5mss4iouk" path="res://obstacles/gate_closed.png" id="2_aqbfs"]
+[ext_resource type="Texture2D" uid="uid://cr3k8a5udhxns" path="res://obstacles/gate_open.png" id="3_5n0u0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ij1sx"]
+size = Vector2(39.604095, 38.406944)
+
+[node name="Gate" type="Node2D" unique_id=695770578]
+script = ExtResource("1_h350g")
+closed_texture = ExtResource("2_aqbfs")
+open_texture = ExtResource("3_5n0u0")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1619687084]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=1967766692]
+scale = Vector2(0.17, 0.17)
+texture = ExtResource("2_aqbfs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1971194868]
+position = Vector2(-19.829916, 8.884073)
+rotation = -0.43364182
+scale = Vector2(2.3762486, -1.8428041)
+shape = SubResource("RectangleShape2D_ij1sx")

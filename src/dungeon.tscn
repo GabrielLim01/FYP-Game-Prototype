@@ -7,12 +7,10 @@
 [ext_resource type="PackedScene" uid="uid://cliopqgngmeag" path="res://obstacles/win_zone.tscn" id="2_tgur7"]
 [ext_resource type="PackedScene" uid="uid://bqpkxht3mx8l8" path="res://player/goblin.tscn" id="3"]
 [ext_resource type="PackedScene" uid="uid://cpssi5rh2auw8" path="res://decorations/candle.tscn" id="4"]
-[ext_resource type="PackedScene" uid="uid://m5s2rwo8p5k7" path="res://obstacles/gate/gate.tscn" id="4_kun6q"]
+[ext_resource type="PackedScene" uid="uid://m5s2rwo8p5k7" path="res://obstacles/gate.tscn" id="4_kun6q"]
 [ext_resource type="PackedScene" uid="uid://60vsnmiet6pq" path="res://obstacles/key/key.tscn" id="5_7wc3a"]
-[ext_resource type="Texture2D" uid="uid://d2wk0yu31evxq" path="res://obstacles/gate/gate_closed.png" id="5_jqckn"]
-[ext_resource type="Script" uid="uid://c4wnl0sjuxe1l" path="res://obstacles/gate/gate.gd" id="5_uag5o"]
 [ext_resource type="Texture2D" uid="uid://bycat883fu7q2" path="res://decorations/banner.png" id="6"]
-[ext_resource type="Texture2D" uid="uid://cq2ffqyv6ntce" path="res://obstacles/gate/gate_open.png" id="6_o2cd7"]
+[ext_resource type="PackedScene" uid="uid://b5j441icnggjo" path="res://obstacles/trap.tscn" id="7_kun6q"]
 [ext_resource type="PackedScene" uid="uid://ebenllixxl6p" path="res://decorations/coin_pile.tscn" id="9"]
 
 [node name="Dungeon" type="Node2D" unique_id=1904835399]
@@ -38,17 +36,8 @@ position = Vector2(-21, -216)
 [node name="Door" parent="Walls" unique_id=499086836 instance=ExtResource("2_q5kms")]
 position = Vector2(17, -184)
 
-[node name="Gate" parent="Walls" unique_id=1049102256 instance=ExtResource("4_kun6q")]
-position = Vector2(265, 130)
-rotation = -0.050614547
-scale = Vector2(0.9999999, 0.9999999)
-script = ExtResource("5_uag5o")
-closed_texture = ExtResource("5_jqckn")
-open_texture = ExtResource("6_o2cd7")
-
-[node name="Key" parent="Walls" unique_id=431418377 node_paths=PackedStringArray("gate") instance=ExtResource("5_7wc3a")]
-position = Vector2(100.248, 50.911)
-gate = NodePath("../Gate")
+[node name="Gate" parent="Walls" unique_id=695770578 instance=ExtResource("4_kun6q")]
+position = Vector2(266, 133)
 
 [node name="Shadows" type="Node2D" parent="Walls" unique_id=1506663849]
 position = Vector2(64, 32)
@@ -63,8 +52,23 @@ tile_map_data = PackedByteArray("AAD8/wUAAgAAAAAAAAD8/wQAAgAAAAAAAAD8//z/AgAAAAA
 tile_set = ExtResource("1")
 y_sort_origin = 32
 
+[node name="Traps" type="Node2D" parent="Walls" unique_id=2122865644]
+position = Vector2(64, 32)
+
+[node name="Trap" parent="Walls/Traps" unique_id=824230185 instance=ExtResource("7_kun6q")]
+position = Vector2(159, 255)
+
+[node name="Trap3" parent="Walls/Traps" unique_id=999511129 instance=ExtResource("7_kun6q")]
+position = Vector2(30, -96)
+
+[node name="Trap4" parent="Walls/Traps" unique_id=1615924287 instance=ExtResource("7_kun6q")]
+position = Vector2(61, -112)
+
+[node name="Trap5" parent="Walls/Traps" unique_id=1586739939 instance=ExtResource("7_kun6q")]
+position = Vector2(304, 200)
+
 [node name="Goblin" parent="Walls" unique_id=806385445 instance=ExtResource("3")]
-position = Vector2(33, -58)
+position = Vector2(485, 183)
 
 [node name="coin_pile" parent="Walls" unique_id=1611318184 instance=ExtResource("9")]
 position = Vector2(-27, -92)
@@ -72,11 +76,16 @@ position = Vector2(-27, -92)
 [node name="FloorObjects" type="Node2D" parent="Walls" unique_id=1643788612]
 position = Vector2(64, 32)
 
-[node name="Button" parent="Walls/FloorObjects" unique_id=813135285 node_paths=PackedStringArray("door") instance=ExtResource("2_4f3i4")]
+[node name="Button" parent="Walls/FloorObjects" unique_id=431418377 node_paths=PackedStringArray("door") instance=ExtResource("2_4f3i4")]
 position = Vector2(94.999985, 274.99997)
 rotation = 8.855397e-05
 scale = Vector2(1.0574416, 1.0074642)
 door = NodePath("../../Door")
+time_limit = 10
+
+[node name="Key" parent="Walls" unique_id=900000001 node_paths=PackedStringArray("gate") instance=ExtResource("5_7wc3a")]
+position = Vector2(258, 229)
+gate = NodePath("../Gate")
 
 [node name="HighWalls" type="TileMap" parent="." unique_id=44538474]
 y_sort_enabled = true
