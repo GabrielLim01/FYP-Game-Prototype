@@ -1,7 +1,0 @@
-res://obstacles/gate/gate.tscn
-res://obstacles/gate/gate.gd
-res://dungeon.tscn
-res://tileset/tileset.tres
-res://obstacles/key/key.tscn
-res://obstacles/key/key.gd
-res://obstacles/button.gd
