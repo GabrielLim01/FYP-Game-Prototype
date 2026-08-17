@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://b5j441icnggjo"]
+
+[ext_resource type="Script" uid="uid://b1h7ldrngmn3o" path="res://obstacles/trap.gd" id="1_e5u6u"]
+[ext_resource type="Texture2D" uid="uid://wxpdcei7yeuk" path="res://decorations/bone_pile_2.png" id="2_kpayi"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8g2br"]
+
+[node name="Trap" type="Area2D" unique_id=1586739939]
+script = ExtResource("1_e5u6u")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1441877932]
+texture = ExtResource("2_kpayi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=490919004]
+shape = SubResource("CircleShape2D_8g2br")
