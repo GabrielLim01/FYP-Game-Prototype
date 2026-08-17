@@ -1,8 +1,2 @@
-res://tileset/tileset.tres
-res://obstacles/gate.tscn
-res://obstacles/gate.gd
 res://dungeon.tscn
-res://obstacles/button.tscn
-res://obstacles/button.gd
-res://obstacles/door.tscn
-res://obstacles/door.gd
+res://tileset/tileset.tres

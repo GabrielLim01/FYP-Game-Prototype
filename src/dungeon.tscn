@@ -55,19 +55,19 @@ y_sort_origin = 32
 position = Vector2(64, 32)
 
 [node name="Trap" parent="Walls/Traps" unique_id=824230185 instance=ExtResource("7_kun6q")]
-position = Vector2(227, 224)
+position = Vector2(159, 255)
 
 [node name="Trap3" parent="Walls/Traps" unique_id=999511129 instance=ExtResource("7_kun6q")]
-position = Vector2(4, 46)
+position = Vector2(30, -96)
 
 [node name="Trap4" parent="Walls/Traps" unique_id=1615924287 instance=ExtResource("7_kun6q")]
-position = Vector2(158, 31)
+position = Vector2(61, -112)
 
 [node name="Trap5" parent="Walls/Traps" unique_id=1586739939 instance=ExtResource("7_kun6q")]
-position = Vector2(353, 128)
+position = Vector2(304, 200)
 
 [node name="Goblin" parent="Walls" unique_id=806385445 instance=ExtResource("3")]
-position = Vector2(461, 179)
+position = Vector2(485, 183)
 
 [node name="coin_pile" parent="Walls" unique_id=1611318184 instance=ExtResource("9")]
 position = Vector2(-27, -92)
